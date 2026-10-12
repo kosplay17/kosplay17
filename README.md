@@ -50,4 +50,5 @@
 
 ## Контакты
 
+* **Telegram:** [@prodichev](https://t.me/prodichev)
 * **GitHub:** [kosplay17](https://github.com/kosplay17)
