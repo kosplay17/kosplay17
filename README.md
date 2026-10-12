@@ -15,7 +15,7 @@
 
 ## Стек
 
-* **Python:** FastAPI, ldap3, httpx, pytest
+* **Python:** FastAPI, Flask, ldap3, httpx, requests, pytest
 * **LLM и поиск:** OpenAI-совместимые API, hybrid RAG (BM25 + embeddings), OCR
 * **Интеграции:** Яндекс Tracker, Яндекс Wiki, Pachca, Active Directory (LDAPS)
 * **Swift:** UIKit и WKWebView (iPadOS), Cocoa и WebKit (macOS, приложение в строке меню)
@@ -31,9 +31,10 @@
 | # | Название проекта | Описание проекта | Статус | Стек |
 |:-:|---|---|:---:|---|
 | 1 | [Support AI](https://github.com/kosplay17/support-ai-docs) | Корпоративный AI Service Desk. Принимает обращения в Pachca, находит инструкции в Яндекс Wiki (hybrid RAG), отвечает в треде с кнопками обратной связи и при необходимости создаёт тикет в Яндекс Tracker с автоматической маршрутизацией по системе, локации, очереди и категории. Admin UI без деплоя, аналитика CSAT / deflection / SLA, SLA-алерты исполнителям, OCR скриншотов, incident mode. *Код закрыт — по ссылке описание продукта и документация.* | используется, v2.0 | Python, FastAPI, LLM, RAG, Pachca, Яндекс Tracker, Яндекс Wiki, Docker |
-| 2 | [AD Console](https://github.com/kosplay17/ad-console) | Локальная веб-консоль Active Directory для macOS: поиск пользователей, компьютеров и групп, статус учётной записи, прямые и вложенные группы, разблокировка, сброс пароля, удаление из группы. Все операции — под учёткой оператора; CSRF, защита от DNS rebinding, лимит входа, журнал действий. Своё окно и иконка в строке меню на Swift. | используется | Python, FastAPI, ldap3, JavaScript, Swift |
-| 3 | [Form Router](https://github.com/kosplay17/form-router) | Подбирает нужную форму обращения в IT Support по свободному описанию проблемы: сначала упорядоченные правила, при промахе — LLM через OpenAI-совместимый API с валидацией ответа. Каталог форм в JSON, лимит запросов, безопасный вывод на странице. | завершён | Python, FastAPI, httpx, LLM, JavaScript |
-| 4 | [IT Support Kiosk](https://github.com/kosplay17/ipad-it-support-kiosk) | Приложение-киоск для iPad со страницей вики IT Support: белый список доменов, кнопка «Домой», возврат на главную после 30 секунд бездействия, автовход сервисной учётной записи (SSO / ADFS + TOTP) с хранением данных в Keychain, меню администратора по PIN. | используется | Swift, UIKit, WKWebView, XcodeGen |
+| 2 | [VIP Support Bot](https://github.com/kosplay17/vip-support-bot) | Бот VIP-канала поддержки: каждое новое сообщение в Pachca превращается в задачу в Яндекс Tracker с автором-сотрудником, бот отвечает в треде ссылкой на задачу и упоминанием дежурных. Догон пропущенных сообщений, если вебхук не дошёл (без дублей), проверка подписи вебхука. | используется | Python, Flask, Pachca API, Yandex Tracker API, PythonAnywhere |
+| 3 | [AD Console](https://github.com/kosplay17/ad-console) | Локальная веб-консоль Active Directory для macOS: поиск пользователей, компьютеров и групп, статус учётной записи, прямые и вложенные группы, разблокировка, сброс пароля, удаление из группы. Все операции — под учёткой оператора; CSRF, защита от DNS rebinding, лимит входа, журнал действий. Своё окно и иконка в строке меню на Swift. | используется | Python, FastAPI, ldap3, JavaScript, Swift |
+| 4 | [Form Router](https://github.com/kosplay17/form-router) | Подбирает нужную форму обращения в IT Support по свободному описанию проблемы: сначала упорядоченные правила, при промахе — LLM через OpenAI-совместимый API с валидацией ответа. Каталог форм в JSON, лимит запросов, безопасный вывод на странице. | завершён | Python, FastAPI, httpx, LLM, JavaScript |
+| 5 | [IT Support Kiosk](https://github.com/kosplay17/ipad-it-support-kiosk) | Приложение-киоск для iPad со страницей вики IT Support: белый список доменов, кнопка «Домой», возврат на главную после 30 секунд бездействия, автовход сервисной учётной записи (SSO / ADFS + TOTP) с хранением данных в Keychain, меню администратора по PIN. | используется | Swift, UIKit, WKWebView, XcodeGen |
 
 ---
 
