@@ -35,6 +35,7 @@
 | 3 | [AD Console](https://github.com/kosplay17/ad-console) | Локальная веб-консоль Active Directory для macOS: поиск пользователей, компьютеров и групп, статус учётной записи, прямые и вложенные группы, разблокировка, сброс пароля, удаление из группы. Все операции — под учёткой оператора; CSRF, защита от DNS rebinding, лимит входа, журнал действий. Своё окно и иконка в строке меню на Swift. | используется | Python, FastAPI, ldap3, JavaScript, Swift |
 | 4 | [Form Router](https://github.com/kosplay17/form-router) | Подбирает нужную форму обращения в IT Support по свободному описанию проблемы: сначала упорядоченные правила, при промахе — LLM через OpenAI-совместимый API с валидацией ответа. Каталог форм в JSON, лимит запросов, безопасный вывод на странице. | завершён | Python, FastAPI, httpx, LLM, JavaScript |
 | 5 | [IT Support Kiosk](https://github.com/kosplay17/ipad-it-support-kiosk) | Приложение-киоск для iPad со страницей вики IT Support: белый список доменов, кнопка «Домой», возврат на главную после 30 секунд бездействия, автовход сервисной учётной записи (SSO / ADFS + TOTP) с хранением данных в Keychain, меню администратора по PIN. | используется | Swift, UIKit, WKWebView, XcodeGen |
+| 6 | [Job Agent](https://github.com/kosplay17/job-agent) | Локальный агент поиска работы: hh.ru + карьерные сайты, двухфазный LLM-скоринг, оценка оклада, резюме и письмо под вакансию, отклик только после Approve (браузерная сессия соискателя). *Репозиторий приватный.* | в работе | Python, FastAPI, Playwright, SQLite, LLM |
 
 ---
 
